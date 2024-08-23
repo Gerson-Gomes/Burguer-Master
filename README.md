@@ -2,15 +2,19 @@
 Welcome to the Burger Shop front-end project! This repository contains the source code for a fictional burger shop website. The project is designed to showcase a modern, responsive web design that provides an engaging user experience for visitors interested in delicious burgers.
 
 <h2>Features</h2>
-Responsive Design: Optimized for viewing on various devices, including desktops, tablets, and mobile phones.
-Interactive UI: Includes features like an interactive menu, order form, and customer testimonials.
-Clean and Modern Layout: A visually appealing design focused on user-friendly navigation.
-Performance Optimizations: Efficient loading times and smooth transitions.
+
+* Responsive Design: Optimized for viewing on various devices, including desktops, tablets, and mobile phones.
+
++ Interactive UI: Includes features like an interactive menu, order form, and customer testimonials.
+  
+* Clean and Modern Layout: A visually appealing design focused on user-friendly navigation.
+  
+* Performance Optimizations: Efficient loading times and smooth transitions.
 <h2>Technologies Used</h2>
-HTML5 & CSS3: For structuring and styling the content.
-JavaScript: To add interactivity and enhance user experience.
-[Your CSS Framework or Libraries]: Mention any specific frameworks or libraries used, such as Bootstrap or Tailwind CSS.
-[Any other tools]: Mention other tools or technologies used in the project.
+
+* HTML5 & CSS3: For structuring and styling the content.
+* JavaScript: To add interactivity and enhance user experience.
+
 <h2>License-Free Images</h2>
 All images used in this project are license-free and sourced from open platforms, ensuring that they are safe to use and distribute. Feel free to reuse or modify the images as needed for your projects.
 
