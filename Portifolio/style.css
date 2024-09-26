@@ -1,9 +1,11 @@
 :root {
-    --bege: rgb(255, 236, 206)
+    --bege: rgb(255, 236, 206);
+    --marrom: rgb(85,51,13);
+    --laranja:  #e85d04;
 }
 
 header {
-    background-color: rgb(85, 51, 13);
+    background-color:var(--marrom);
     position: relative;
     z-index: 1;
     height: 135px;
@@ -11,6 +13,9 @@ header {
 
 nav {
     display: flex;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -48,18 +53,124 @@ nav>ul>li>a:hover{
     z-index: -1;
     border-radius: 100px;
 }
-main{
+.paginaPrincipal{
     display: grid;
     width: -webkit-fill-available;
     position: relative;
     height: 86vh;
-    grid-template-columns: 8% 300px 100px auto;
-    grid-template-rows: 19% 600px auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25% 1fr 1fr 1fr;
+ 
+}
+.frontImage{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: flex;
+}
+#restauranteFoto{
+    position: relative;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.frontContent{
+    display: flex;
+    justify-content:space-around;
+    margin: 25px 10px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.frontContent>*{
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.frontContent>h1{
+    font-size: 50px;
+    text-align: center;
+}
+.frontContent>p{
+    font-size: 20px;
+    text-align: center;
+}
+#frontPhoto{
+    height: 200px;
+    position: relative;
+    object-fit: cover;
+}
+.border{
+    background-color: var(--marrom);
+    grid-row: 2 / 5;
+}
+.buttonContainer{
+    grid-column: 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuButton{
+    height: 7vh;
+    width: 12vw;
+    background-color: var(--bege);
+    border-style: solid;
+    border-color: var(--marrom);
+    border-radius: 15px;
+    border-width: 4px;
+    display: flex;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    text-decoration: auto;
+    color: black;
+    transition: 0.4s;
+}
+.menuButton:hover{
+    background-color: var(--laranja);
+}
+.paginaCardapio{
+    grid-template-columns: 2fr 13vw 6fr 2fr;
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr;
+    height: 100vh;
 }
 .menuInterativo{
-    grid-column-start: 2;
-    grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 3;
-
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menuInterativo>h1{
+    font-size: 4ch;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding: 28px;
+}
+.cardapio{
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+.cardapioItens{
+    display: flex;
+    width: 100%;
+    height: 88px;
+}
+.cardapioItens>div{
+    height: 100%;
+    width: 20%;
+    background-color: red;
+    border: solid yellow;
 }
