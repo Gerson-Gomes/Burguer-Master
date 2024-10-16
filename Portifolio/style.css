@@ -4,6 +4,16 @@
     --laranja:  #e85d04;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     background-color:var(--marrom);
     position: relative;
@@ -149,8 +159,9 @@ nav>ul>li>a:hover{
 .paginaCardapio{
     grid-template-columns: 2fr 220px 6fr 2fr;
     display: grid;
-    grid-template-rows: 1fr 7fr 1fr;
-    height: 100vh;
+    grid-template-rows: 140px 600px 5fr;
+    height: max-content;
+    background-color: #f1f1f1;
 }
 .menuInterativo{
     grid-row-start: 2;
@@ -164,6 +175,7 @@ nav>ul>li>a:hover{
     border: solid;
     border-color: var(--marrom);
     width: 220px;
+    height: 600px;
 }
 .menuInterativo>h1{
     font-size: 4ch;
@@ -182,26 +194,64 @@ nav>ul>li>a:hover{
 .cardapio{
     grid-row-start: 2;
     grid-column-start: 3;
+    grid-row-end: 5;
+    height: max-content;
 }
-.cardapioItens{
+.sectionTitle{
+    font-size: 5ch;
+    font-family: "Coiny", system-ui;
+    font-weight: 800;
+    font-style: oblique;
+    margin-left: 2ch;
+}
+.sectionLine{
+    border: 6px solid var(--laranja);
+    border-radius: 5px;
+    margin-left: 30px;
+    width: 97%;
+}
+.cardapioCarnes{
     display: flex;
     width: 100%;
-    height: 250px;
-    justify-content: space-between;
+    height: max-content;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 10px 30px;
+    align-items: stretch;
 }
-.cardapioItens>div{
-    height: 100%;
-    width: 205px;
+.cardapioCarnes>div {
+    width:27%;
+    margin-right: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 6px 12px #d9d9d9;
+    border-radius: 10px;
 }
-.cardapioItens>div>img{
-    height: 80%;
+.cardapioCarnes>div>*{
+    margin: 10px 10px 15px;
+}
+.item>img{
+    height: 180px;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
-.cardapioItens>div>button{
-    width: 100%;
+.itemDescription{
+    text-align: center;
+}
+.botoes{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+#cartButton{
+    width: 40%;
+    margin-right: 10px;
+}
+#customiseButton{
+    width: 40%;
 }
 .whoTitulo{
     color: var(--laranja);
@@ -238,9 +288,9 @@ nav>ul>li>a:hover{
 footer{
     background-color: var(--marrom);
     width: 100%;
-    height: 20vh;
     display: flex;
     justify-content: space-evenly;
+    padding: 20px 0px;
 }
 footer>*{
     color: var(--bege);
