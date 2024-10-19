@@ -26,10 +26,14 @@ nav {
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
+    justify-content: space-between;
+}
+.navLeft{
+    display: flex;
 }
 
 
-nav>ul {
+.navLeft>ul {
     display: flex;
     align-items: center;
     position: relative;
@@ -37,14 +41,13 @@ nav>ul {
     height: 170px;
 }
 
-
-nav>ul>li>a {
+.navLeft>ul>li>a {
     padding-left: 10px;
     color: var(--bege);
     font-size: 25px;
     text-decoration:none;
 }
-nav>ul>li>a:hover{
+.navLeft>ul>li>a:hover{
     text-decoration: underline;
     color: var(--bege);
     
@@ -62,8 +65,29 @@ nav>ul>li>a:hover{
     background-color: var(--bege);
     right: 262px;
     bottom: -21px;
-    z-index: -1;
+    z-index: -2;
     border-radius: 100px;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    height: 170px;
+    color: var(--bege);
+    font-size: 30px;
+    flex-direction: row;
+    width: 21%;
+    justify-content: space-evenly;
+    padding: 0px 73px 0px 0px;
+}
+#login{
+    padding-left: 10px;
+    color: var(--bege);
+    font-size: 25px;
+    text-decoration:none;
+}
+#login:hover{
+    text-decoration: underline;
+    color: var(--bege);
 }
 .paginaPrincipal{
     display: grid;
@@ -220,7 +244,7 @@ nav>ul>li>a:hover{
     align-items: stretch;
 }
 .cardapioCarnes>div {
-    width:27%;
+    width:291.6px;
     margin-right: 20px;
     background-color: #ffffff;
     display: flex;
@@ -239,6 +263,10 @@ nav>ul>li>a:hover{
 }
 .itemDescription{
     text-align: center;
+}
+.price{
+    text-align: center;
+    margin-top: 10px;
 }
 .botoes{
     display: flex;
@@ -284,6 +312,204 @@ nav>ul>li>a:hover{
     font-style: normal;
     text-align: center;
 }
+.cartMain{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.cartBlockLeft{
+    width: 30%;
+    height: 100%;
+    padding: 66px 20px 20px 0px;
+}
+.cartBlockLeft>h1{
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.125em;
+    margin-top: 5%;
+}
+.cartBlockRight{
+    width: 50%;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#addressButton{
+    background-color: var(--bege);
+    transition: 200ms;
+}
+#addressButton:hover{
+    background-color: rgb(235, 216, 186);
+}
+#paymentMethod{
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 40px 0px;
+    font-size: 1.5em;
+    color: var(--marrom);
+}
+.payment{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(2, 230px);
+    grid-template-rows: repeat(4, 50px);
+    column-gap: 40px;
+    row-gap: 40px;
+}
+.payment>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 100ms;
+    border: solid #dddddd 1px;
+    border-radius: 3px;
+}
+.payment>div:hover{
+    background-color: #d7ecdf;
+    
+}
+#pix{
+    height: 15px;
+}
+#master{
+    height: 30px;
+}
+#visa{
+    height: 10px;
+}
+#elo{
+    height: 15px;
+}
+
+
+
+.paymentContent{
+    height: 90%;
+    width: 65%;
+    background-color: #f1f1f1;
+    border: solid var(--marrom) 6px;
+    border-radius: 12px;
+}
+.cartStatus{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.buy{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+.buy>button{
+    background-color: #d1d1d1;
+}
+.cadastro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+}
+.cadastroContainer{
+    height: 91.5%;
+    background: var(--bege);
+    margin: 40px auto;
+    width: 1000px;
+    border: solid 6px var(--marrom);
+}
+.login{
+    padding: 30px 10px 20px;
+}
+#loginRequest{
+    text-align: center;
+    padding: 20px 0px;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.125em;
+}
+.loginInput{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+    flex-direction: column;
+    height: 100px;
+    align-items: center;
+}
+.loginInput>input{
+    width: 40%;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+#loginButton{
+    background-color: var(--laranja);
+    border-color: var(--laranja);
+}
+
+.register{
+    background-color: var(--bege);
+    width: 100%;
+    height: max-content;
+}
+
+#registerRequest{
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 2.25em;
+    padding: 25px 0px;
+}
+.registerData{
+    background-color: var(--bege);
+    width: 100%;
+    height: max-content;
+    padding: 20px 15% 20px 25%;
+}
+.fullName{
+    margin: 0px 5px;
+}
+.cepContainer{
+    padding: 20px 0px;
+    margin: 0px 5px;
+
+}
+.cepResult{
+    padding: 10px 0px;
+}
+.cepResult>*{
+    margin: 8px 5px;
+}
+#street{
+    width: 509.6px;
+}
+#neighborhood{
+    width: 35%;
+}
+#uf{
+    width: 34px;
+}
+
+#registerButton{
+    background-color: var(--laranja);
+    border-color: var(--laranja);
+}
+
 
 footer{
     background-color: var(--marrom);
